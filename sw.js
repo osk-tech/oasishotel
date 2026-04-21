@@ -1,5 +1,5 @@
-const CACHE_NAME = 'oasis-menu-v4';
-const IMAGE_CACHE = 'oasis-images-v4';
+const CACHE_NAME = 'oasis-menu-v5';
+const IMAGE_CACHE = 'oasis-images-v5';
 const APP_SCOPE_URL = new URL(self.registration.scope);
 const APP_SCOPE_PATH = APP_SCOPE_URL.pathname;
 const ASSETS_TO_CACHE = [
@@ -64,7 +64,7 @@ self.addEventListener('fetch', (event) => {
         return;
     }
 
-    if (url.pathname.endsWith('script.js')) {
+    if (shouldUseNetworkFirst(request, url)) {
         event.respondWith(networkFirst(request));
         return;
     }
@@ -106,15 +106,42 @@ async function networkFirst(request) {
         }
         return networkResponse;
     } catch (error) {
+        if (request.mode === 'navigate') {
+            const fallbackResponse = await caches.match(APP_SCOPE_URL.href) ||
+                await caches.match(new URL('index.html', APP_SCOPE_URL).href);
+            if (fallbackResponse) {
+                return fallbackResponse;
+            }
+        }
+
         const cachedResponse = await caches.match(request);
         if (cachedResponse) {
             return cachedResponse;
         }
 
-        return new Response(JSON.stringify({ error: 'Sin conexión y sin cache' }), {
-            headers: { 'Content-Type': 'application/json' }
-        });
+        const isJsonRequest = request.headers.get('accept')?.includes('application/json') ||
+            request.destination === '';
+
+        if (isJsonRequest) {
+            return new Response(JSON.stringify({ error: 'Sin conexión y sin cache' }), {
+                status: 503,
+                statusText: 'Service Unavailable',
+                headers: { 'Content-Type': 'application/json' }
+            });
+        }
+
+        return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
     }
+}
+
+function shouldUseNetworkFirst(request, url) {
+    return request.mode === 'navigate' ||
+        url.pathname.endsWith('.html') ||
+        url.pathname.endsWith('.css') ||
+        url.pathname.endsWith('.js') ||
+        url.pathname.endsWith('.json') ||
+        url.pathname.endsWith('.webmanifest') ||
+        url.pathname.endsWith('manifest.json');
 }
 
 async function cacheImage(request) {

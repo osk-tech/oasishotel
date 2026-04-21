@@ -63,8 +63,14 @@
                 Seafood
             </button>
             
-            <button class="category-btn" data-category="drinks" title="Drinks" aria-pressed="false">
-                Drinks
+            <button class="category-btn" data-category="cold-drinks" title="Cold Drinks" aria-pressed="false">
+                Cold Drinks
+            </button>
+            <button class="category-btn" data-category="hot-drinks" title="Hot Drinks" aria-pressed="false">
+                Hot Drinks
+            </button>
+            <button class="category-btn" data-category="alcohol" title="Alcohol" aria-pressed="false">
+                Alcohol
             </button>
         </div>
     </nav>
@@ -133,9 +139,23 @@
     <script src="js/script.js" defer></script>
     <script>
         if ('serviceWorker' in navigator) {
+            let isRefreshing = false;
+
+            navigator.serviceWorker.addEventListener('controllerchange', () => {
+                if (isRefreshing) {
+                    return;
+                }
+
+                isRefreshing = true;
+                window.location.reload();
+            });
+
             window.addEventListener('load', () => {
                 navigator.serviceWorker.register('sw.js', { scope: './' })
-                    .catch(() => {});
+                    .then((registration) => registration.update())
+                    .catch((error) => {
+                        console.error('Service worker registration failed:', error);
+                    });
             });
         }
     </script>

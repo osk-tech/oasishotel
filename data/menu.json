@@ -169,8 +169,8 @@
         }
       ]
     },
-    "drinks": {
-      "titulo": "Drinks",
+    "cold-drinks": {
+      "titulo": "Cold Drinks",
       "items": [
         {
           "id": "drin001",
@@ -194,6 +194,18 @@
           "imagen": "assets/images/bebidas/drin003.webp"
         },
         {
+          "id": "drin006",
+          "nombre": "Iced Tea",
+          "descripcion": "With lemon and mint",
+          "precio": "Q26",
+          "imagen": "assets/images/bebidas/drin006.webp"
+        }
+      ]
+    },
+    "hot-drinks": {
+      "titulo": "Hot Drinks",
+      "items": [
+        {
           "id": "drin004",
           "nombre": "Espresso",
           "descripcion": "Premium quality cream",
@@ -206,14 +218,12 @@
           "descripcion": "With steamed milk",
           "precio": "Q34",
           "imagen": "assets/images/bebidas/drin005.webp"
-        },
-        {
-          "id": "drin006",
-          "nombre": "Iced Tea",
-          "descripcion": "With lemon and mint",
-          "precio": "Q26",
-          "imagen": "assets/images/bebidas/drin006.webp"
-        },
+        }
+      ]
+    },
+    "alcohol": {
+      "titulo": "Alcohol",
+      "items": [
         {
           "id": "drin007",
           "nombre": "Red Wine",
