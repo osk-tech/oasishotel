@@ -368,4 +368,40 @@ document.addEventListener('DOMContentLoaded', () => {
     });
     
     initSearch();
+    initSWUpdate();
 });
+
+function initSWUpdate() {
+    const updateBtn = document.getElementById('update-btn');
+    const updateBanner = document.getElementById('update-banner');
+
+    if (!('serviceWorker' in navigator) || !updateBtn || !updateBanner) {
+        return;
+    }
+
+    navigator.serviceWorker.ready.then((registration) => {
+        registration.addEventListener('updatefound', () => {
+            const newSW = registration.installing;
+            if (!newSW) return;
+
+            newSW.addEventListener('statechange', () => {
+                if (newSW.state === 'installed' && navigator.serviceWorker.controller) {
+                    updateBanner.hidden = false;
+                }
+            });
+        });
+
+        if (registration.waiting && navigator.serviceWorker.controller) {
+            updateBanner.hidden = false;
+        }
+    });
+
+    updateBtn.addEventListener('click', () => {
+        navigator.serviceWorker.ready.then((registration) => {
+            if (registration.waiting) {
+                registration.waiting.postMessage({ type: 'SKIP_WAITING' });
+            }
+        });
+        window.location.reload();
+    });
+}

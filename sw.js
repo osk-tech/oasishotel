@@ -1,5 +1,5 @@
-const CACHE_NAME = 'oasis-menu-v5';
-const IMAGE_CACHE = 'oasis-images-v5';
+const CACHE_NAME = 'oasis-menu-v6';
+const IMAGE_CACHE = 'oasis-images-v6';
 const APP_SCOPE_URL = new URL(self.registration.scope);
 const APP_SCOPE_PATH = APP_SCOPE_URL.pathname;
 const ASSETS_TO_CACHE = [
@@ -7,7 +7,6 @@ const ASSETS_TO_CACHE = [
     new URL('index.html', APP_SCOPE_URL).href,
     new URL('css/styles.css', APP_SCOPE_URL).href,
     new URL('js/script.js', APP_SCOPE_URL).href,
-    new URL('data/menu.json', APP_SCOPE_URL).href,
     new URL('manifest.json', APP_SCOPE_URL).href,
     new URL('assets/branding/logo-oasis.webp', APP_SCOPE_URL).href
 ];
@@ -60,7 +59,7 @@ self.addEventListener('fetch', (event) => {
     }
 
     if (url.pathname.endsWith('.json')) {
-        event.respondWith(networkFirst(request));
+        event.respondWith(networkOnly(request));
         return;
     }
 
@@ -92,7 +91,6 @@ async function cacheFirst(request) {
                 return fallbackResponse;
             }
         }
-
         return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
     }
 }
@@ -113,24 +111,24 @@ async function networkFirst(request) {
                 return fallbackResponse;
             }
         }
-
         const cachedResponse = await caches.match(request);
         if (cachedResponse) {
             return cachedResponse;
         }
-
-        const isJsonRequest = request.headers.get('accept')?.includes('application/json') ||
-            request.destination === '';
-
-        if (isJsonRequest) {
-            return new Response(JSON.stringify({ error: 'Sin conexión y sin cache' }), {
-                status: 503,
-                statusText: 'Service Unavailable',
-                headers: { 'Content-Type': 'application/json' }
-            });
-        }
-
         return new Response('Offline', { status: 503, statusText: 'Service Unavailable' });
+    }
+}
+
+async function networkOnly(request) {
+    try {
+        const networkResponse = await fetch(request);
+        return networkResponse;
+    } catch (error) {
+        const cachedResponse = await caches.match(request);
+        if (cachedResponse) {
+            return cachedResponse;
+        }
+        return new Response('Offline', { status: 503 });
     }
 }
 
@@ -139,7 +137,6 @@ function shouldUseNetworkFirst(request, url) {
         url.pathname.endsWith('.html') ||
         url.pathname.endsWith('.css') ||
         url.pathname.endsWith('.js') ||
-        url.pathname.endsWith('.json') ||
         url.pathname.endsWith('.webmanifest') ||
         url.pathname.endsWith('manifest.json');
 }
@@ -149,7 +146,6 @@ async function cacheImage(request) {
     if (cachedResponse) {
         return cachedResponse;
     }
-
     try {
         const networkResponse = await fetch(request);
         if (networkResponse.ok) {

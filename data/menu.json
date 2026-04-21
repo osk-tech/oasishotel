@@ -172,34 +172,62 @@
     "cold-drinks": {
       "titulo": "Cold Drinks",
       "items": [
+        
+           
         {
           "id": "drin001",
-          "nombre": "Water",
-          "descripcion": "Still or sparkling",
+          "nombre": "Gatorade",
+          "descripcion": "Grape/Orange/Fruit Punch",
           "precio": "Q15",
           "imagen": "assets/images/bebidas/drin001.webp"
         },
         {
           "id": "drin002",
-          "nombre": "Natural Juice",
-          "descripcion": "Orange, apple or watermelon",
-          "precio": "Q34",
+          "nombre": "Lipton Ice Tea",
+          "descripcion": "Raspberry or Lemon",
+          "precio": "Q15",
           "imagen": "assets/images/bebidas/drin002.webp"
         },
         {
           "id": "drin003",
           "nombre": "Tropical Smoothie",
-          "descripcion": "Pineapple, mango and coconut",
-          "precio": "Q45",
+          "descripcion": "Strawberry and Banana with milk",
+          "precio": "Q25",
           "imagen": "assets/images/bebidas/drin003.webp"
         },
+        
+        {
+            "id": "drin017",
+            "nombre": "Coca Cola",   
+            "descripcion": "Classic soda",
+            "precio": "Q10",
+            "imagen": "assets/images/bebidas/drin017.webp"
+          },
+        {
+          "id": "drin018",
+          "nombre": "Coca Cola Light",
+          "descripcion": "Light soda",
+          "precio": "Q10",
+          "imagen": "assets/images/bebidas/drin018.webp"
+
+        },
+        
         {
           "id": "drin006",
-          "nombre": "Iced Tea",
+          "nombre": "Lemonade",
           "descripcion": "With lemon and mint",
-          "precio": "Q26",
+          "precio": "Q25",
           "imagen": "assets/images/bebidas/drin006.webp"
-        }
+        },
+        {
+          "id": "drin014",
+          "nombre": "Naranjada",
+          "descripcion": "Chilled orange juice with a hint of sparkling water, perfect for a refreshing boost on a hot day",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin014.webp"
+        } 
+      
+      
       ]
     },
     "hot-drinks": {
@@ -207,41 +235,63 @@
       "items": [
         {
           "id": "drin004",
-          "nombre": "Espresso",
+          "nombre": "Coffee",
           "descripcion": "Premium quality cream",
-          "precio": "Q26",
+          "precio": "Q12",
           "imagen": "assets/images/bebidas/drin004.webp"
         },
         {
           "id": "drin005",
-          "nombre": "Cappuccino",
+          "nombre": "Coffee with Milk",
           "descripcion": "With steamed milk",
-          "precio": "Q34",
+          "precio": "Q15",
           "imagen": "assets/images/bebidas/drin005.webp"
-        }
+        },
+        {
+          "id": "drin011",
+          "nombre": "Tea",
+          "descripcion": "A selection of fine teas, served hot",
+          "precio": "Q12",
+          "imagen": "assets/images/bebidas/drin011.webp"
+        },
+        {
+          "id": "drin012",
+          "nombre": "Tea with Milk  ",
+          "descripcion": "Spiced tea with steamed milk, a comforting blend of flavors",
+          "precio": "Q15",
+          "imagen": "assets/images/bebidas/drin012.webp"
+        },
+          {
+            "id": "drin013",
+            "nombre": "Hot Chocolate",
+            "descripcion": "Rich and creamy hot chocolate, perfect for a cozy moment",
+            "precio": "Q20",
+            "imagen": "assets/images/bebidas/drin013.webp"
+          }
+
       ]
     },
     "alcohol": {
-      "titulo": "Alcohol",
+      "titulo": "Good Drinks for a Good Time",
       "items": [
         {
           "id": "drin007",
-          "nombre": "Red Wine",
-          "descripcion": "Premium selection, glass",
-          "precio": "Q60",
+          "nombre": "Mojito",
+          "descripcion": "Rum, mint, lemon and soda",
+          "precio": "Q30",
           "imagen": "assets/images/bebidas/drin007.webp"
         },
         {
           "id": "drin008",
-          "nombre": "Craft Beer",
-          "descripcion": "Local variety, 330ml",
-          "precio": "Q41",
+          "nombre": "Cuba Libre",
+          "descripcion": "Rum, cola, and lime, a classic cocktail that combines the sweetness of cola with the refreshing zest of lime, perfect for any occasion",
+          "precio": "Q25",  
           "imagen": "assets/images/bebidas/drin008.webp"
         },
         {
           "id": "drin009",
-          "nombre": "Mojito",
-          "descripcion": "Rum, mint, lemon and soda",
+          "nombre": "Pina Colada",
+          "descripcion": "Rum, coconut cream, and pineapple juice, a tropical delight that transports you to a beach paradise",
           "precio": "Q68",
           "imagen": "assets/images/bebidas/drin009.webp"
         },
@@ -251,7 +301,51 @@
           "descripcion": "Tequila, triple sec, lemon",
           "precio": "Q75",
           "imagen": "assets/images/bebidas/drin010.webp"
-        }
+        },
+      {
+          "id": "drin015",
+          "nombre": "Daiquiri",
+          "descripcion": "A refreshing blend of rum, lime juice, and simple syrup, served in a chilled glass. Perfect for those who enjoy a tangy and sweet cocktail  .",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin015.webp"
+      },
+      {
+          "id": "drin016",
+          "nombre": "Glass Wine",
+          "descripcion": "A glass of wine, available in red, white, or rosé, perfect for pairing with your meal or enjoying on its own.",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin016.webp"
+      },
+      {
+          "id": "drin017",
+          "nombre": "Gallo Beer",
+          "descripcion": "The National Beer of Guatemala, a refreshing lager with a crisp and balanced flavor, perfect for enjoying with friends or as a complement to your meal.",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin017.webp"
+      },
+      { 
+          "id": "drin018",
+          "nombre": "Corona Beer",
+          "descripcion": "A light and refreshing beer with a crisp taste, perfect for enjoying on a sunny day or as a complement to your meal.",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin018.webp"
+      },
+      {
+          "id": "drin019",
+          "nombre": "Heineken Beer",
+          "descripcion": "A premium lager with a smooth and balanced flavor, perfect for enjoying with friends or as a complement to your meal.",
+          "precio": "Q25",
+          "imagen": "assets/images/bebidas/drin019.webp"
+      },
+      {
+          "id": "drin020",
+          "nombre": "Michelada",
+          "descripcion": "A classic Mexican cocktail made with beer, lime juice, assorted sauces, spices, and peppers, served in a chilled, salt-rimmed glass.",
+          "precio": "Q45",
+          "imagen": "assets/images/bebidas/drin020.webp"
+      }
+      
+      
       ]
     },
     "snacks": {

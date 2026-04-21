@@ -1212,3 +1212,47 @@ body.modal-open {
         transition-duration: 0.01ms !important;
     }
 }
+
+/* ==================== Update Banner ==================== */
+.update-banner {
+    position: fixed;
+    bottom: 1rem;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--secondary-color);
+    color: white;
+    padding: 0.75rem 1.25rem;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    z-index: 1002;
+    animation: slideUp 0.3s ease;
+}
+
+.update-banner[hidden] {
+    display: none;
+}
+
+.update-banner span {
+    font-size: 0.9rem;
+    font-weight: 500;
+}
+
+.update-banner button {
+    background: white;
+    color: var(--secondary-color);
+    border: none;
+    padding: 0.4rem 0.75rem;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.update-banner button:hover {
+    background: var(--primary-color);
+    color: white;
+}
