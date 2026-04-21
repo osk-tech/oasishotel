@@ -1,0 +1,248 @@
+{
+  "menu": {
+    "breakfast": {
+      "titulo": "Breakfast",
+      "items": [
+        {
+          "id": "des001",
+          "nombre": "Choose your eggs",
+          "descripcion": "Can choose, scrambled, fried well-done, sunny side-up, scrambled with tomatoes and onions",
+          "precio": "Q45",
+          "imagen": "assets/images/desayuno/des001.webp"
+        },
+        {
+          "id": "des002",
+          "nombre": "Pancakes with Fruits",
+          "descripcion": "Pancakes with seasonal fruits and maple syrup",
+          "precio": "Q50",
+          "imagen": "assets/images/desayuno/des002.webp"
+        },
+        {
+          "id": "des003",
+          "nombre": "Omelette",
+          "descripcion": "Omelette with cheese, ham, and vegetables, with a side of black beans, toast and fruit",
+          "precio": "Q45",
+          "imagen": "assets/images/desayuno/des003.webp"
+        },
+        {
+          "id": "des004",
+          "nombre": "Cereal with milk and seasonal fruit",
+          "descripcion": "Cereal served with milk and seasonal fruit.",
+          "precio": "Q48",
+          "imagen": "assets/images/desayuno/des004.webp"
+        },
+        {
+          "id": "des005",
+          "nombre": "Toasts with jelly and butter",
+          "descripcion": "Toast with butter and jelly, served with a side of fresh fruit.",
+          "precio": "Q40",
+          "imagen": "assets/images/desayuno/des005.webp"
+        },
+        {
+          "id": "des006",
+          "nombre": "Yogurt with Granola and Fruits",
+          "descripcion": "Natural yogurt, granola, seasonal fruits, honey",
+          "precio": "Q55",
+          "imagen": "assets/images/desayuno/des006.webp"
+        }
+      ]
+    },
+    "lunch": {
+      "titulo": "Lunch",
+      "items": [
+        {
+          "id": "alm001",
+          "nombre": "1.-House Special / Schnitzel",
+          "descripcion": "Breaded chicken schnitzel with choice of sides (potatoes, pasta, salad or vegetables)",
+          "precio": "Q65",
+          "imagen": "assets/images/almuerzo/alm001.webp"
+        },
+        {
+          "id": "alm002",
+          "nombre": "2.-House Special / Shakshuka",
+          "descripcion": "Shakshuka with egg, tomato, peppers and spices, served with bread",
+          "precio": "Q50",
+          "imagen": "assets/images/almuerzo/alm002.webp"
+        },
+        {
+          "id": "alm003",
+          "nombre": "3.-House Special / Grilled Chicken",
+          "descripcion": "Grilled chicken breast with herbs, served with mashed potatoes, pasta or salad",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/alm003.webp"
+        },
+        {
+          "id": "alm004",
+          "nombre": "4.-House Special / Grilled Beef",
+          "descripcion": "Grilled beef steak with eggs, black beans, cheese or cream, served with a choice of sides (potatoes, pasta, salad or vegetables)",
+          "precio": "Q55",
+          "imagen": "assets/images/almuerzo/alm004.webp"
+        },
+        {
+          "id": "alm005",
+          "nombre": "5.-Grilled Beef",
+          "descripcion": "Grilled beef with pasta, salad or cooked vegetables",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/alm005.webp"
+        },
+        {
+          "id": "alm006",
+          "nombre": "6.-Pasta Bolognese",
+          "descripcion": "Pasta with a rich meat sauce, topped with Parmesan cheese",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/alm006.webp"
+        },
+        {
+          "id": "alm007",
+          "nombre": "7.-Chicken Noodle Soup",
+          "descripcion": "Chicken noodle soup with vegetables and herbs",
+          "precio": "Q50",
+          "imagen": "assets/images/almuerzo/alm007.webp"
+        },
+        {
+          "id": "alm008",
+          "nombre": "8.-House Salad",
+          "descripcion": "House salad with lettuce, carrots, tomatoes, onion, cheese and eggs",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/alm008.webp"
+        },
+        {
+          "id": "alm009",
+          "nombre": "9.-Vegetable Plate",
+          "descripcion": "Grilled or steamed seasonal vegetables, served with rice, black beans or pasta",
+          "precio": "Q45",
+          "imagen": "assets/images/almuerzo/alm009.webp"
+        },
+        {
+          "id": "alm010",
+          "nombre": "10.-Spanish Omelette",
+          "descripcion": "Traditional Spanish omelette with potatoes and onions, served with a side of salad or bread",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/alm010.webp"
+        }
+      ]
+    },
+    "dinner": {
+      "titulo": "Dinner",
+      "items": [
+        {
+          "id": "cen001",
+          "nombre": "Choose your eggs",
+          "descripcion": "Can choose, scrambled, fried well-done, sunny side-up, scrambled with tomatoes and onions",
+          "precio": "Q45",
+          "imagen": "assets/images/cena/cen001.webp"
+        },
+        {
+          "id": "cen002",
+          "nombre": "Pancakes with Fruits",
+          "descripcion": "Pancakes with seasonal fruits and maple syrup",
+          "precio": "Q50",
+          "imagen": "assets/images/cena/cen002.webp"
+        },
+        {
+          "id": "cen003",
+          "nombre": "Omelette",
+          "descripcion": "Omelette with cheese, ham, and vegetables, with a side of black beans, toast and fruit",
+          "precio": "Q45",
+          "imagen": "assets/images/cena/cen003.webp"
+        },
+        {
+          "id": "cen004",
+          "nombre": "Cereal with milk and seasonal fruit",
+          "descripcion": "Cereal served with milk and seasonal fruit.",
+          "precio": "Q48",
+          "imagen": "assets/images/cena/cen004.webp"
+        },
+        {
+          "id": "cen005",
+          "nombre": "Toasts with jelly and butter",
+          "descripcion": "Toast with butter and jelly, served with a side of fresh fruit.",
+          "precio": "Q40",
+          "imagen": "assets/images/cena/cen005.webp"
+        },
+        {
+          "id": "cen006",
+          "nombre": "Yogurt with Granola and Fruits",
+          "descripcion": "Natural yogurt, granola, seasonal fruits, honey",
+          "precio": "Q55",
+          "imagen": "assets/images/cena/cen006.webp"
+        }
+      ]
+    },
+    "drinks": {
+      "titulo": "Drinks",
+      "items": [
+        {
+          "id": "drin001",
+          "nombre": "Water",
+          "descripcion": "Still or sparkling",
+          "precio": "Q15",
+          "imagen": "assets/images/bebidas/drin001.webp"
+        },
+        {
+          "id": "drin002",
+          "nombre": "Natural Juice",
+          "descripcion": "Orange, apple or watermelon",
+          "precio": "Q34",
+          "imagen": "assets/images/bebidas/drin002.webp"
+        },
+        {
+          "id": "drin003",
+          "nombre": "Tropical Smoothie",
+          "descripcion": "Pineapple, mango and coconut",
+          "precio": "Q45",
+          "imagen": "assets/images/bebidas/drin003.webp"
+        },
+        {
+          "id": "drin004",
+          "nombre": "Espresso",
+          "descripcion": "Premium quality cream",
+          "precio": "Q26",
+          "imagen": "assets/images/bebidas/drin004.webp"
+        },
+        {
+          "id": "drin005",
+          "nombre": "Cappuccino",
+          "descripcion": "With steamed milk",
+          "precio": "Q34",
+          "imagen": "assets/images/bebidas/drin005.webp"
+        },
+        {
+          "id": "drin006",
+          "nombre": "Iced Tea",
+          "descripcion": "With lemon and mint",
+          "precio": "Q26",
+          "imagen": "assets/images/bebidas/drin006.webp"
+        },
+        {
+          "id": "drin007",
+          "nombre": "Red Wine",
+          "descripcion": "Premium selection, glass",
+          "precio": "Q60",
+          "imagen": "assets/images/bebidas/drin007.webp"
+        },
+        {
+          "id": "drin008",
+          "nombre": "Craft Beer",
+          "descripcion": "Local variety, 330ml",
+          "precio": "Q41",
+          "imagen": "assets/images/bebidas/drin008.webp"
+        },
+        {
+          "id": "drin009",
+          "nombre": "Mojito",
+          "descripcion": "Rum, mint, lemon and soda",
+          "precio": "Q68",
+          "imagen": "assets/images/bebidas/drin009.webp"
+        },
+        {
+          "id": "drin010",
+          "nombre": "Margarita",
+          "descripcion": "Tequila, triple sec, lemon",
+          "precio": "Q75",
+          "imagen": "assets/images/bebidas/drin010.webp"
+        }
+      ]
+    }
+  }
+}
