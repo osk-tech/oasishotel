@@ -245,145 +245,86 @@
       ]
     },
     "snacks": {
-      "titulo": "Antojos de Terraza",
+      "titulo": "Snacks next to the River",
       "items": [
         {
           "id": "snk001",
-          "nombre": "El Surtido del Nómada",
-          "descripcion": "Nachos bañados en queso fundido, jalapeños y pico de gallo. Perfectos para acompañar tu segunda cerveza de la noche.",
-          "precio": "Q55",
+          "nombre": "17.-Veggie Nachos",
+          "descripcion": "Totopos crujientes con queso fundido, frijoles refritos, jalapeños y guacamole. El snack que te hará olvidar que estás en medio de la selva.",
+          "precio": "Q45",
           "imagen": "assets/images/snacks/snk001.webp"
         },
         {
           "id": "snk002",
-          "nombre": "Guacamole & Totopos",
-          "descripcion": "Aguacate fresco machacado con tomate, cebolla morada y cilantro. La mejor excusa para no moverte de tu mesa.",
-          "precio": "Q45",
+          "nombre": "18.-Beef Nachos",
+          "descripcion": "Totopos crujientes con carne de res sazonada, queso fundido, jalapeños y guacamole. La mejor excusa para no moverte de tu mesa.",
+          "precio": "Q55",
           "imagen": "assets/images/snacks/snk002.webp"
         },
         {
           "id": "snk003",
-          "nombre": "Alitas Crispy de Terraza",
-          "descripcion": "Alitas de pollo al horno con salsa BBQ ahumada. Messy, sabrosas e imposibles de parar.",
-          "precio": "Q68",
+          "nombre": "19.-Sandwich Ham & Cheese",
+          "descripcion": "Sándwich de jamón y queso con pan artesanal, lechuga fresca y tomate. El clásico que nunca falla, perfecto para compartir o devorar solo.",
+          "precio": "Q35",
           "imagen": "assets/images/snacks/snk003.webp"
         },
         {
           "id": "snk004",
-          "nombre": "Papas Bravas del Oasis",
-          "descripcion": "Papas crujientes con alioli de ajo asado y nuestra salsa secreta de la terraza. Sin explicaciones.",
-          "precio": "Q50",
+          "nombre": "20.-Chicken Sandwich",
+          "descripcion": "Sándwich de pollo con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
+          "precio": "Q40",
           "imagen": "assets/images/snacks/snk004.webp"
         },
         {
           "id": "snk005",
-          "nombre": "Pico de Gallo del Viajero",
-          "descripcion": "Chips artesanales con salsa de tomate fresco, jalapeño y un buen chorro de limón de Semuc.",
-          "precio": "Q40",
+          "nombre": "21.-Veggie Sandwich",
+          "descripcion": "Sándwich vegetariano con pan artesanal, lechuga fresca, tomate y aguacate. Ligero, fresco y delicioso.",
+          "precio": "Q35",
           "imagen": "assets/images/snacks/snk005.webp"
         },
         {
           "id": "snk006",
-          "nombre": "Mini Sliders del Campamento",
-          "descripcion": "Tres minihamburguesas con cheddar derretido, pepinillo y salsa de la casa. Pequeños, grandes sabores.",
-          "precio": "Q72",
+          "nombre": "22.-Tuna Sandwich",
+          "descripcion": "Sándwich de atún con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
+          "precio": "Q40",
           "imagen": "assets/images/snacks/snk006.webp"
-        }
+        },
+        {
+          "id": "snk007",
+          "nombre": "The Oasis Pizza",
+          "descripcion": "Pizza with Cheese, Mushrooms and Salami, Delicious pizza with a perfect blend of cheese, mushrooms, and salami. A classic favorite for any time of the day.",
+          "precio": "Q160",
+          "imagen": "assets/images/snacks/snk007.webp"
+        }        
       ]
+    
     },
     "seafood": {
-      "titulo": "La Pesca del Oasis",
+      "titulo": "The Oasis Catch - Fresh from the River",
       "items": [
         {
           "id": "sea001",
-          "nombre": "Ceviche Tropical",
-          "descripcion": "Pescado fresco curtido al momento con un toque de mango local. Ligero, fresco y adictivo.",
-          "precio": "Q85",
+          "nombre": "Fish Fillet ",
+          "descripcion": "Breaded fish fillet, fried to golden perfection, served with rice and a side of fries. The catch of the day, straight from the river to your plate.",
+          "precio": "Q75",
           "imagen": "assets/images/seafood/sea001.webp"
         },
         {
           "id": "sea002",
-          "nombre": "Camarones al Ajillo",
-          "descripcion": "Camarones salteados en mantequilla, ajo asado y vino blanco. Servidos con pan crujiente para no desperdiciar ni una gota.",
-          "precio": "Q95",
+          "nombre": "Garlic Shrimps or Crispy Shrimps",
+          "descripcion": "Shrimp sautéed in butter, roasted garlic. Served with crispy bread to soak up every drop.",
+          "precio": "Q85",
           "imagen": "assets/images/seafood/sea002.webp"
         },
         {
           "id": "sea003",
-          "nombre": "Filete a la Plancha",
-          "descripcion": "Filete fresco del día con hierbas del jardín, limón y vegetales de temporada. Sano pero sin pedir perdón.",
-          "precio": "Q90",
+          "nombre": "Grilled Fish Fillet ( MOJARRA)",
+          "descripcion": "Grilled fish fillet, seasoned with herbs and served with a side of vegetables. A healthy and delicious choice.",
+          "precio": "Q100",
           "imagen": "assets/images/seafood/sea003.webp"
-        },
-        {
-          "id": "sea004",
-          "nombre": "Tacos de Pescado Tropical",
-          "descripcion": "Dos tortillas de maíz con pescado empanizado, col morada y crema de chipotle. El taco que no pediste pero que necesitabas.",
-          "precio": "Q80",
-          "imagen": "assets/images/seafood/sea004.webp"
-        },
-        {
-          "id": "sea005",
-          "nombre": "Sopa de Mariscos del Oasis",
-          "descripcion": "Caldo profundo con camarones, mejillones y trozos de pescado. El abrazo que nadie te dio en el río.",
-          "precio": "Q95",
-          "imagen": "assets/images/seafood/sea005.webp"
-        },
-        {
-          "id": "sea006",
-          "nombre": "Coctél de Camarón",
-          "descripcion": "Camarones bañados en salsa de tomate picante, aguacate y jugo de limón. Vibes de playa en plena selva.",
-          "precio": "Q85",
-          "imagen": "assets/images/seafood/sea006.webp"
-        }
-      ]
-    },
-    "desserts": {
-      "titulo": "El Toque Dulce",
-      "items": [
-        {
-          "id": "des001",
-          "nombre": "Brownie Caliente & Helado",
-          "descripcion": "Brownie recién horneado, tibio por dentro, con una bola de helado de vainilla y sirope de chocolate. El final perfecto.",
-          "precio": "Q55",
-          "imagen": "assets/images/desserts/des001.webp"
-        },
-        {
-          "id": "des002",
-          "nombre": "Flan de Coco Artesanal",
-          "descripcion": "Flan suave y sedoso de coco fresco, bañado en caramelo dorado. Un pedacito del Caribe en plena selva.",
-          "precio": "Q45",
-          "imagen": "assets/images/desserts/des002.webp"
-        },
-        {
-          "id": "des003",
-          "nombre": "Panqueques de Postre",
-          "descripcion": "Panqueques esponjosos con miel de maple, fresas frescas y crema batida. Pequeños pero devastadores.",
-          "precio": "Q50",
-          "imagen": "assets/images/desserts/des003.webp"
-        },
-        {
-          "id": "des004",
-          "nombre": "Tarta de Plátano & Nutella",
-          "descripcion": "Base crujiente de galleta, plátano maduro y Nutella, terminada con crema chantilly. La guarida del antojo.",
-          "precio": "Q55",
-          "imagen": "assets/images/desserts/des004.webp"
-        },
-        {
-          "id": "des005",
-          "nombre": "Helado Tropical de Temporada",
-          "descripcion": "Tres bolas de helado artesanal con frutas tropicales del día. Servido con galleta de jengibre y un poco de nostalgia.",
-          "precio": "Q48",
-          "imagen": "assets/images/desserts/des005.webp"
-        },
-        {
-          "id": "des006",
-          "nombre": "Churros con Chocolate",
-          "descripcion": "Churros caseros crujientes por fuera y suaves por dentro, con salsa de chocolate caliente para dipear sin vergüenza.",
-          "precio": "Q52",
-          "imagen": "assets/images/desserts/des006.webp"
         }
       ]
     }
-  }
+    
+    }
 }

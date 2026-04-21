@@ -1,7 +1,6 @@
 // ==================== Variables ====================
 let menuData = null;
 let currentCategory = 'breakfast';
-let searchQuery = '';
 
 const LAST_CATEGORY_KEY = 'oasis_last_category';
 const CACHE_KEY = 'oasis_menu_cache';
@@ -141,8 +140,8 @@ function renderMenu() {
 
 function createItemElement(item, index) {
     const div = document.createElement('div');
-    div.className = 'menu-item';
-    div.style.animationDelay = (index * 0.05) + 's';
+    div.className = 'menu-item animate-in';
+    div.style.animationDelay = (index * 0.06) + 's';
 
     const imageHTML = item.imagen
         ? `<img src="${escapeHTML(item.imagen)}" alt="${escapeHTML(item.nombre)}" class="menu-item-image" loading="lazy" onerror="this.style.display='none'">`
@@ -308,6 +307,38 @@ function doSearch(query) {
 
 // ==================== Inicialización ====================
 document.addEventListener('DOMContentLoaded', () => {
+    const searchToggle = document.getElementById('search-toggle');
+    const searchContainer = document.getElementById('search-container');
+    const searchInput = document.getElementById('search-input');
+    const searchClear = document.getElementById('search-clear');
+    
+    if (searchToggle && searchContainer) {
+        searchToggle.addEventListener('click', () => {
+            searchToggle.classList.toggle('active');
+            searchContainer.classList.toggle('expanded');
+            if (searchContainer.classList.contains('expanded')) {
+                searchInput.focus();
+            }
+        });
+        
+        if (searchClear) {
+            searchClear.addEventListener('click', () => {
+                searchInput.value = '';
+                searchClear.classList.remove('visible');
+                searchInput.dispatchEvent(new Event('input'));
+            });
+        }
+        
+        searchInput.addEventListener('blur', () => {
+            if (!searchInput.value) {
+                setTimeout(() => {
+                    searchToggle.classList.remove('active');
+                    searchContainer.classList.remove('expanded');
+                }, 200);
+            }
+        });
+    }
+    
     loadMenuData();
     
     const categoryBtns = document.querySelectorAll('.category-btn');
