@@ -1,0 +1,28 @@
+{
+    "name": "OASIS Restaurant Menu",
+    "short_name": "OASIS Menu",
+    "description": "Digital menu of OASIS Restaurant - The Traveler Hotel",
+    "start_url": "./",
+    "scope": "./",
+    "display": "standalone",
+    "background_color": "#0f2818",
+    "theme_color": "#0f2818",
+    "orientation": "portrait",
+    "icons": [
+        {
+            "src": "assets/branding/logo-oasis.webp",
+            "sizes": "192x192",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        },
+        {
+            "src": "assets/branding/logo-oasis.webp",
+            "sizes": "512x512",
+            "type": "image/webp",
+            "purpose": "any maskable"
+        }
+    ],
+    "categories": ["food", "lifestyle"],
+    "lang": "en",
+    "dir": "ltr"
+}
