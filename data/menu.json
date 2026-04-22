@@ -331,13 +331,6 @@
           "imagen": "assets/images/bebidas/drin018.webp"
       },
       {
-          "id": "drin019",
-          "nombre": "Heineken Beer",
-          "descripcion": "A premium lager with a smooth and balanced flavor, perfect for enjoying with friends or as a complement to your meal.",
-          "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin019.webp"
-      },
-      {
           "id": "drin020",
           "nombre": "Michelada",
           "descripcion": "A classic Mexican cocktail made with beer, lime juice, assorted sauces, spices, and peppers, served in a chilled, salt-rimmed glass.",
