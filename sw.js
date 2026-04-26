@@ -1,5 +1,6 @@
-const CACHE_NAME = 'oasis-menu-v6';
-const IMAGE_CACHE = 'oasis-images-v6';
+const CACHE_VERSION = 'v7';
+const CACHE_NAME = `oasis-menu-${CACHE_VERSION}`;
+const IMAGE_CACHE = `oasis-images-${CACHE_VERSION}`;
 const APP_SCOPE_URL = new URL(self.registration.scope);
 const APP_SCOPE_PATH = APP_SCOPE_URL.pathname;
 const ASSETS_TO_CACHE = [
@@ -54,7 +55,7 @@ self.addEventListener('fetch', (event) => {
         url.pathname.endsWith('.jpeg') ||
         url.pathname.endsWith('.webp') ||
         url.pathname.endsWith('.svg')) {
-        event.respondWith(cacheImage(request));
+        event.respondWith(networkFirst(request, IMAGE_CACHE));
         return;
     }
 
@@ -64,7 +65,7 @@ self.addEventListener('fetch', (event) => {
     }
 
     if (shouldUseNetworkFirst(request, url)) {
-        event.respondWith(networkFirst(request));
+        event.respondWith(networkFirst(request, CACHE_NAME));
         return;
     }
 
@@ -95,11 +96,15 @@ async function cacheFirst(request) {
     }
 }
 
-async function networkFirst(request) {
+async function fetchFresh(request) {
+    return fetch(new Request(request, { cache: 'no-store' }));
+}
+
+async function networkFirst(request, cacheName = CACHE_NAME) {
     try {
-        const networkResponse = await fetch(request);
+        const networkResponse = await fetchFresh(request);
         if (networkResponse.ok) {
-            const cache = await caches.open(CACHE_NAME);
+            const cache = await caches.open(cacheName);
             cache.put(request, networkResponse.clone());
         }
         return networkResponse;
@@ -121,7 +126,7 @@ async function networkFirst(request) {
 
 async function networkOnly(request) {
     try {
-        const networkResponse = await fetch(request);
+        const networkResponse = await fetchFresh(request);
         return networkResponse;
     } catch (error) {
         const cachedResponse = await caches.match(request);
@@ -139,23 +144,6 @@ function shouldUseNetworkFirst(request, url) {
         url.pathname.endsWith('.js') ||
         url.pathname.endsWith('.webmanifest') ||
         url.pathname.endsWith('manifest.json');
-}
-
-async function cacheImage(request) {
-    const cachedResponse = await caches.match(request);
-    if (cachedResponse) {
-        return cachedResponse;
-    }
-    try {
-        const networkResponse = await fetch(request);
-        if (networkResponse.ok) {
-            const cache = await caches.open(IMAGE_CACHE);
-            cache.put(request, networkResponse.clone());
-        }
-        return networkResponse;
-    } catch (error) {
-        return new Response('', { status: 404 });
-    }
 }
 
 self.addEventListener('message', (event) => {
