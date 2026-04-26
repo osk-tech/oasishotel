@@ -61,7 +61,7 @@
           "id": "alm002",
           "nombre": "2.-House Special / Shakshuka",
           "descripcion": "Shakshuka with egg, tomato, peppers and spices, served with bread",
-          "precio": "Q50",
+          "precio": "Q55",
           "imagen": "assets/images/almuerzo/alm002.webp"
         },
         {
@@ -197,18 +197,18 @@
         },
         
         {
-            "id": "drin017",
+            "id": "drin019",
             "nombre": "Coca Cola",   
             "descripcion": "Classic soda",
             "precio": "Q10",
-            "imagen": "assets/images/bebidas/drin017.webp"
+            "imagen": "assets/images/bebidas/drin019.webp"
           },
         {
-          "id": "drin018",
+          "id": "drin021",
           "nombre": "Coca Cola Light",
           "descripcion": "Light soda",
           "precio": "Q10",
-          "imagen": "assets/images/bebidas/drin018.webp"
+          "imagen": "assets/images/bebidas/drin021.webp"
 
         },
         
@@ -292,28 +292,28 @@
           "id": "drin009",
           "nombre": "Pina Colada",
           "descripcion": "Rum, coconut cream, and pineapple juice, a tropical delight that transports you to a beach paradise",
-          "precio": "Q68",
+          "precio": "Q30",
           "imagen": "assets/images/bebidas/drin009.webp"
         },
         {
           "id": "drin010",
           "nombre": "Margarita",
           "descripcion": "Tequila, triple sec, lemon",
-          "precio": "Q75",
+          "precio": "Q30",
           "imagen": "assets/images/bebidas/drin010.webp"
         },
       {
           "id": "drin015",
           "nombre": "Daiquiri",
           "descripcion": "A refreshing blend of rum, lime juice, and simple syrup, served in a chilled glass. Perfect for those who enjoy a tangy and sweet cocktail  .",
-          "precio": "Q25",
+          "precio": "Q30",
           "imagen": "assets/images/bebidas/drin015.webp"
       },
       {
           "id": "drin016",
           "nombre": "Glass Wine",
           "descripcion": "A glass of wine, available in red, white, or rosé, perfect for pairing with your meal or enjoying on its own.",
-          "precio": "Q25",
+          "precio": "Q35",
           "imagen": "assets/images/bebidas/drin016.webp"
       },
       {
@@ -422,6 +422,5 @@
         }
       ]
     }
-    
-    }
+  }
 }
