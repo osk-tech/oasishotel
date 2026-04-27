@@ -119,6 +119,46 @@
           "descripcion": "Traditional Spanish omelette with potatoes and onions, served with a side of salad or bread",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm010.webp"
+        },
+        {
+          "id": "alm-divider-burgers",
+          "type": "section-header",
+          "titulo": "Burgers"
+        },
+        {
+          "id": "alm011",
+          "nombre": "Texas Burger",
+          "descripcion": "Beef patty with BBQ sauce, crispy bacon, cheddar cheese, onion rings and jalapeños. Includes soda.",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/burger.webp"
+        },
+        {
+          "id": "alm012",
+          "nombre": "Deli Burger",
+          "descripcion": "Beef patty with turkey, swiss cheese, mustard, pickles and fresh lettuce. Includes soda.",
+          "precio": "Q60",
+          "imagen": "assets/images/almuerzo/burger.webp"
+        },
+        {
+          "id": "alm013",
+          "nombre": "Deluxe",
+          "descripcion": "Double beef patty with special sauce, double cheese, tomato, lettuce and caramelized onions. Includes soda.",
+          "precio": "Q55",
+          "imagen": "assets/images/almuerzo/burger.webp"
+        },
+        {
+          "id": "alm014",
+          "nombre": "Big Burger",
+          "descripcion": "Triple beef patty with bacon, cheddar, crispy onions, lettuce, tomato and house sauce. Includes soda.",
+          "precio": "Q68",
+          "imagen": "assets/images/almuerzo/burger.webp"
+        },
+        {
+          "id": "alm015",
+          "nombre": "Cheese Burger",
+          "descripcion": "Classic beef patty with melted cheddar cheese, lettuce, tomato, onion and ketchup. Includes soda.",
+          "precio": "Q56",
+          "imagen": "assets/images/almuerzo/burger.webp"
         }
       ]
     },
@@ -175,56 +215,56 @@
         
            
         {
-          "id": "drin001",
+          "id": "drink001",
           "nombre": "Gatorade",
           "descripcion": "Grape/Orange/Fruit Punch",
           "precio": "Q15",
-          "imagen": "assets/images/bebidas/drin001.webp"
+          "imagen": "assets/images/bebidas/drink001.webp"
         },
         {
-          "id": "drin002",
+          "id": "drink002",
           "nombre": "Lipton Ice Tea",
           "descripcion": "Raspberry or Lemon",
           "precio": "Q15",
-          "imagen": "assets/images/bebidas/drin002.webp"
+          "imagen": "assets/images/bebidas/drink002.webp"
         },
         {
-          "id": "drin003",
+          "id": "drink003",
           "nombre": "Tropical Smoothie",
           "descripcion": "Strawberry and Banana with milk",
           "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin003.webp"
+          "imagen": "assets/images/bebidas/drink003.webp"
         },
         
         {
-            "id": "drin019",
+            "id": "drink019",
             "nombre": "Coca Cola",   
             "descripcion": "Classic soda",
             "precio": "Q10",
-            "imagen": "assets/images/bebidas/drin019.webp"
+            "imagen": "assets/images/bebidas/drink019.webp"
           },
         {
-          "id": "drin021",
+          "id": "drink021",
           "nombre": "Coca Cola Light",
           "descripcion": "Light soda",
           "precio": "Q10",
-          "imagen": "assets/images/bebidas/drin021.webp"
+          "imagen": "assets/images/bebidas/drink021.webp"
 
         },
         
         {
-          "id": "drin006",
+          "id": "drink006",
           "nombre": "Lemonade",
           "descripcion": "With lemon and mint",
           "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin006.webp"
+          "imagen": "assets/images/bebidas/drink006.webp"
         },
         {
-          "id": "drin014",
+          "id": "drink014",
           "nombre": "Naranjada",
           "descripcion": "Chilled orange juice with a hint of sparkling water, perfect for a refreshing boost on a hot day",
           "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin014.webp"
+          "imagen": "assets/images/bebidas/drink014.webp"
         } 
       
       
@@ -234,39 +274,39 @@
       "titulo": "Hot Drinks",
       "items": [
         {
-          "id": "drin004",
+          "id": "drink004",
           "nombre": "Coffee",
           "descripcion": "Premium quality cream",
           "precio": "Q12",
-          "imagen": "assets/images/bebidas/drin004.webp"
+          "imagen": "assets/images/bebidas/drink004.webp"
         },
         {
-          "id": "drin005",
+          "id": "drink005",
           "nombre": "Coffee with Milk",
           "descripcion": "With steamed milk",
           "precio": "Q15",
-          "imagen": "assets/images/bebidas/drin005.webp"
+          "imagen": "assets/images/bebidas/drink005.webp"
         },
         {
-          "id": "drin011",
+          "id": "drink011",
           "nombre": "Tea",
           "descripcion": "A selection of fine teas, served hot",
           "precio": "Q12",
-          "imagen": "assets/images/bebidas/drin011.webp"
+          "imagen": "assets/images/bebidas/drink011.webp"
         },
         {
-          "id": "drin012",
+          "id": "drink012",
           "nombre": "Tea with Milk  ",
           "descripcion": "Spiced tea with steamed milk, a comforting blend of flavors",
           "precio": "Q15",
-          "imagen": "assets/images/bebidas/drin012.webp"
+          "imagen": "assets/images/bebidas/drink012.webp"
         },
           {
-            "id": "drin013",
+            "id": "drink013",
             "nombre": "Hot Chocolate",
             "descripcion": "Rich and creamy hot chocolate, perfect for a cozy moment",
             "precio": "Q20",
-            "imagen": "assets/images/bebidas/drin013.webp"
+            "imagen": "assets/images/bebidas/drink013.webp"
           }
 
       ]
@@ -275,67 +315,74 @@
       "titulo": "Good Drinks for a Good Time",
       "items": [
         {
-          "id": "drin007",
+          "id": "drink007",
           "nombre": "Mojito",
           "descripcion": "Rum, mint, lemon and soda",
           "precio": "Q30",
-          "imagen": "assets/images/bebidas/drin007.webp"
+          "imagen": "assets/images/bebidas/drink007.webp"
         },
         {
-          "id": "drin008",
+          "id": "drink008",
           "nombre": "Cuba Libre",
           "descripcion": "Rum, cola, and lime, a classic cocktail that combines the sweetness of cola with the refreshing zest of lime, perfect for any occasion",
           "precio": "Q25",  
-          "imagen": "assets/images/bebidas/drin008.webp"
+          "imagen": "assets/images/bebidas/drink008.webp"
         },
         {
-          "id": "drin009",
+          "id": "drink009",
           "nombre": "Pina Colada",
           "descripcion": "Rum, coconut cream, and pineapple juice, a tropical delight that transports you to a beach paradise",
           "precio": "Q30",
-          "imagen": "assets/images/bebidas/drin009.webp"
+          "imagen": "assets/images/bebidas/drink009.webp"
         },
         {
-          "id": "drin010",
+          "id": "drink010",
           "nombre": "Margarita",
           "descripcion": "Tequila, triple sec, lemon",
           "precio": "Q30",
-          "imagen": "assets/images/bebidas/drin010.webp"
+          "imagen": "assets/images/bebidas/drink010.webp"
         },
       {
-          "id": "drin015",
+          "id": "drink015",
           "nombre": "Daiquiri",
           "descripcion": "A refreshing blend of rum, lime juice, and simple syrup, served in a chilled glass. Perfect for those who enjoy a tangy and sweet cocktail  .",
           "precio": "Q30",
-          "imagen": "assets/images/bebidas/drin015.webp"
+          "imagen": "assets/images/bebidas/drink015.webp"
       },
       {
-          "id": "drin016",
+          "id": "drink016",
           "nombre": "Glass Wine",
           "descripcion": "A glass of wine, available in red, white, or rosé, perfect for pairing with your meal or enjoying on its own.",
           "precio": "Q35",
-          "imagen": "assets/images/bebidas/drin016.webp"
+          "imagen": "assets/images/bebidas/drink016.webp"
       },
       {
-          "id": "drin017",
+          "id": "drink017",
           "nombre": "Gallo Beer",
           "descripcion": "The National Beer of Guatemala, a refreshing lager with a crisp and balanced flavor, perfect for enjoying with friends or as a complement to your meal.",
           "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin017.webp"
+          "imagen": "assets/images/bebidas/drink017.webp"
       },
       { 
-          "id": "drin018",
+          "id": "drink018",
           "nombre": "Corona Beer",
           "descripcion": "A light and refreshing beer with a crisp taste, perfect for enjoying on a sunny day or as a complement to your meal.",
           "precio": "Q25",
-          "imagen": "assets/images/bebidas/drin018.webp"
+          "imagen": "assets/images/bebidas/drink018.webp"
       },
       {
-          "id": "drin020",
+          "id": "drink020",
           "nombre": "Michelada",
           "descripcion": "A classic Mexican cocktail made with beer, lime juice, assorted sauces, spices, and peppers, served in a chilled, salt-rimmed glass.",
           "precio": "Q45",
-          "imagen": "assets/images/bebidas/drin020.webp"
+          "imagen": "assets/images/bebidas/drink020.webp"
+      },
+      {
+          "id": "drink022",
+          "nombre": "Oasis",
+          "descripcion": "Our signature cocktail made with white rum and blue curaçao, a refreshing tropical blend as vibrant as the place itself.",
+          "precio": "Q40",
+          "imagen": "assets/images/bebidas/oasis.webp"
       }
       
       
@@ -419,7 +466,18 @@
           "descripcion": "Grilled fish fillet, seasoned with herbs and served with a side of vegetables. A healthy and delicious choice.",
           "precio": "Q100",
           "imagen": "assets/images/seafood/sea003.webp"
-        }
+        },
+        
+      {
+
+          "id": "sea004",
+            "nombre": "Ceviche",
+            "descripcion": "Fresh fish marinated in citrus juices, mixed with onions, tomatoes, and cilantro. A refreshing and tangy dish perfect for seafood lovers.",
+            "precio": "Q60",
+            "imagen": "assets/images/seafood/sea004.webp"
+
+      }
+      
       ]
     }
   }

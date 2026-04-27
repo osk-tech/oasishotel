@@ -343,6 +343,30 @@ body {
     gap: 0.75rem;
 }
 
+/* ==================== Section Header (subsection divider) ==================== */
+.menu-section-header {
+    grid-column: 1 / -1;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 1rem;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--secondary-color, #3d8f6d);
+    margin-top: 0.5rem;
+    padding: 0.4rem 0 0.25rem;
+}
+
+.menu-section-header::before,
+.menu-section-header::after {
+    content: '';
+    flex: 1;
+    height: 2px;
+    background: linear-gradient(to right, transparent, var(--secondary-color, #3d8f6d), transparent);
+    opacity: 0.4;
+}
+
 .menu-item.animate-in {
     animation: slideUp 0.4s ease forwards;
     opacity: 0;

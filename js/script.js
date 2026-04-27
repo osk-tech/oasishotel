@@ -139,6 +139,13 @@ function renderMenu() {
 }
 
 function createItemElement(item, index) {
+    if (item.type === 'section-header') {
+        const div = document.createElement('div');
+        div.className = 'menu-section-header';
+        div.textContent = item.titulo || '';
+        return div;
+    }
+
     const div = document.createElement('div');
     div.className = 'menu-item animate-in';
     div.style.animationDelay = (index * 0.06) + 's';
@@ -263,6 +270,7 @@ function doSearch(query) {
     Object.entries(menuData.menu).forEach(([catKey, cat]) => {
         if (cat.items && Array.isArray(cat.items)) {
             cat.items.forEach(item => {
+                if (item.type === 'section-header') return;
                 if (item.nombre.toLowerCase().includes(q) || 
                     (item.descripcion || '').toLowerCase().includes(q)) {
                     results.push({ ...item, _cat: cat.titulo });
