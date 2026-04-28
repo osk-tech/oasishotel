@@ -2,46 +2,59 @@
   "menu": {
     "breakfast": {
       "titulo": "Breakfast",
+      "titulo_es": "Desayuno",
       "items": [
         {
           "id": "des001",
           "nombre": "Choose your eggs",
+          "nombre_es": "Elige tus huevos",
           "descripcion": "Can choose, scrambled, fried well-done, sunny side-up, scrambled with tomatoes and onions",
+          "descripcion_es": "Puedes elegir, revueltos, fritos bien cocidos, estrellados, revueltos con tomates y cebollas",
           "precio": "Q45",
           "imagen": "assets/images/desayuno/des001.webp"
         },
         {
           "id": "des002",
           "nombre": "Pancakes with Fruits",
+          "nombre_es": "Panqueques con Frutas",
           "descripcion": "Pancakes with seasonal fruits and maple syrup",
+          "descripcion_es": "Panqueques con frutas de temporada y jarabe",
           "precio": "Q50",
           "imagen": "assets/images/desayuno/des002.webp"
         },
         {
           "id": "des003",
           "nombre": "Omelette",
+          "nombre_es": "Tortilla",
           "descripcion": "Omelette with cheese, ham, and vegetables, with a side of black beans, toast and fruit",
+          "descripcion_es": "Tortilla con queso, jamón y verduras, acompañada de frijoles negros, tostadas y fruta",
           "precio": "Q45",
           "imagen": "assets/images/desayuno/des003.webp"
         },
         {
           "id": "des004",
           "nombre": "Cereal with milk and seasonal fruit",
+          "nombre_es": "Cereal con leche y fruta de temporada",
           "descripcion": "Cereal served with milk and seasonal fruit.",
+          "descripcion_es": "Cereal servido con leche y fruta de temporada.",
           "precio": "Q48",
           "imagen": "assets/images/desayuno/des004.webp"
         },
         {
           "id": "des005",
           "nombre": "Toasts with jelly and butter",
+          "nombre_es": "Tostadas con mermelada y mantequilla",
           "descripcion": "Toast with butter and jelly, served with a side of fresh fruit.",
+          "descripcion_es": "Tostadas con mantequilla y mermelada, acompañadas de fruta fresca.",
           "precio": "Q40",
           "imagen": "assets/images/desayuno/des005.webp"
         },
         {
           "id": "des006",
           "nombre": "Yogurt with Granola and Fruits",
+          "nombre_es": "Yogur con Granola y Frutas",
           "descripcion": "Natural yogurt, granola, seasonal fruits, honey",
+          "descripcion_es": "Yogur natural, granola, frutas de temporada, miel",
           "precio": "Q55",
           "imagen": "assets/images/desayuno/des006.webp"
         }
@@ -49,114 +62,146 @@
     },
     "lunch": {
       "titulo": "Lunch",
+      "titulo_es": "Almuerzo",
       "items": [
         {
           "id": "alm001",
           "nombre": "1.-House Special / Schnitzel",
+          "nombre_es": "1.-Especial de la Casa / Schnitzel",
           "descripcion": "Breaded chicken schnitzel with choice of sides (potatoes, pasta, salad or vegetables)",
+          "descripcion_es": "Schnitzel de pollo empanizado con elección de acompañamientos (papas, pasta, ensalada o verduras)",
           "precio": "Q65",
           "imagen": "assets/images/almuerzo/alm001.webp"
         },
         {
           "id": "alm002",
           "nombre": "2.-House Special / Shakshuka",
+          "nombre_es": "2.-Especial de la Casa / Shakshuka",
           "descripcion": "Shakshuka with egg, tomato, peppers and spices, served with bread",
+          "descripcion_es": "Shakshuka con huevo, tomate, pimientos y especias, servido con pan",
           "precio": "Q55",
           "imagen": "assets/images/almuerzo/alm002.webp"
         },
         {
           "id": "alm003",
           "nombre": "3.-House Special / Grilled Chicken",
+          "nombre_es": "3.-Especial de la Casa / Pollo a la Parrilla",
           "descripcion": "Grilled chicken breast with herbs, served with mashed potatoes, pasta or salad",
+          "descripcion_es": "Pechuga de pollo a la parrilla con hierbas, servida con puré de papas, pasta o ensalada",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm003.webp"
         },
         {
           "id": "alm004",
           "nombre": "4.-House Special / Grilled Beef",
+          "nombre_es": "4.-Especial de la Casa / Res a la Parrilla",
           "descripcion": "Grilled beef steak with eggs, black beans, cheese or cream, served with a choice of sides (potatoes, pasta, salad or vegetables)",
+          "descripcion_es": "Bistec de res a la parrilla con huevos, frijoles negros, queso o crema, servido con una elección de acompañamientos (papas, pasta, ensalada o verduras)",
           "precio": "Q55",
           "imagen": "assets/images/almuerzo/alm004.webp"
         },
         {
           "id": "alm005",
           "nombre": "5.-Grilled Beef",
+          "nombre_es": "5.-Res a la Parrilla",
           "descripcion": "Grilled beef with pasta, salad or cooked vegetables",
+          "descripcion_es": "Res a la parrilla con pasta, ensalada o verduras cocidas",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm005.webp"
         },
         {
           "id": "alm006",
           "nombre": "6.-Pasta Bolognese",
+          "nombre_es": "6.-Pasta a la Boloñesa",
           "descripcion": "Pasta with a rich meat sauce, topped with Parmesan cheese",
+          "descripcion_es": "Pasta con una rica salsa de carne, cubierta con queso parmesano",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm006.webp"
         },
         {
           "id": "alm007",
           "nombre": "7.-Chicken Noodle Soup",
+          "nombre_es": "7.-Sopa de Fideos con Pollo",
           "descripcion": "Chicken noodle soup with vegetables and herbs",
+          "descripcion_es": "Sopa de fideos con pollo, verduras y hierbas",
           "precio": "Q50",
           "imagen": "assets/images/almuerzo/alm007.webp"
         },
         {
           "id": "alm008",
           "nombre": "8.-House Salad",
+          "nombre_es": "8.-Ensalada de la Casa",
           "descripcion": "House salad with lettuce, carrots, tomatoes, onion, cheese and eggs",
+          "descripcion_es": "Ensalada de la casa con lechuga, zanahorias, tomates, cebolla, queso y huevos",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm008.webp"
         },
         {
           "id": "alm009",
           "nombre": "9.-Vegetable Plate",
+          "nombre_es": "9.-Plato de Verduras",
           "descripcion": "Grilled or steamed seasonal vegetables, served with rice, black beans or pasta",
+          "descripcion_es": "Verduras de temporada a la parrilla o al vapor, servidas con arroz, frijoles negros o pasta",
           "precio": "Q45",
           "imagen": "assets/images/almuerzo/alm009.webp"
         },
         {
           "id": "alm010",
           "nombre": "10.-Spanish Omelette",
+          "nombre_es": "10.-Tortilla Española",
           "descripcion": "Traditional Spanish omelette with potatoes and onions, served with a side of salad or bread",
+          "descripcion_es": "Tortilla española tradicional con papas y cebollas, servida con una guarnición de ensalada o pan",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/alm010.webp"
         },
         {
           "id": "alm-divider-burgers",
           "type": "section-header",
-          "titulo": "Burgers"
+          "titulo": "Burgers",
+          "titulo_es": "Hamburguesas"
         },
         {
           "id": "alm011",
           "nombre": "Texas Burger",
+          "nombre_es": "Texas Burger",
           "descripcion": "Beef patty with BBQ sauce, crispy bacon, cheddar cheese, onion rings and jalapeños. Includes soda.",
+          "descripcion_es": "Hamburguesa de res con salsa BBQ, tocino crujiente, queso cheddar, aros de cebolla y jalapeños. Incluye refresco.",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/burger.webp"
         },
         {
           "id": "alm012",
           "nombre": "Deli Burger",
+          "nombre_es": "Deli Burger",
           "descripcion": "Beef patty with turkey, swiss cheese, mustard, pickles and fresh lettuce. Includes soda.",
+          "descripcion_es": "Hamburguesa de res con pavo, queso suizo, mostaza, pepinillos y lechuga fresca. Incluye refresco.",
           "precio": "Q60",
           "imagen": "assets/images/almuerzo/burger.webp"
         },
         {
           "id": "alm013",
           "nombre": "Deluxe",
+          "nombre_es": "Deluxe",
           "descripcion": "Double beef patty with special sauce, double cheese, tomato, lettuce and caramelized onions. Includes soda.",
+          "descripcion_es": "Doble hamburguesa de res con salsa especial, doble queso, tomate, lechuga y cebollas caramelizadas. Incluye refresco.",
           "precio": "Q55",
           "imagen": "assets/images/almuerzo/burger.webp"
         },
         {
           "id": "alm014",
           "nombre": "Big Burger",
+          "nombre_es": "Big Burger",
           "descripcion": "Triple beef patty with bacon, cheddar, crispy onions, lettuce, tomato and house sauce. Includes soda.",
+          "descripcion_es": "Triple hamburguesa de res con tocino, queso cheddar, cebollas crujientes, lechuga, tomate y salsa de la casa. Incluye refresco.",
           "precio": "Q68",
           "imagen": "assets/images/almuerzo/burger.webp"
         },
         {
           "id": "alm015",
           "nombre": "Cheese Burger",
+          "nombre_es": "Cheese Burger",
           "descripcion": "Classic beef patty with melted cheddar cheese, lettuce, tomato, onion and ketchup. Includes soda.",
+          "descripcion_es": "Hamburguesa clásica de res con queso cheddar derretido, lechuga, tomate, cebolla y ketchup. Incluye refresco.",
           "precio": "Q56",
           "imagen": "assets/images/almuerzo/burger.webp"
         }
@@ -164,46 +209,59 @@
     },
     "dinner": {
       "titulo": "Dinner",
+      "titulo_es": "Cena",
       "items": [
         {
           "id": "cen001",
           "nombre": "Choose your eggs",
+          "nombre_es": "Elige tus huevos",
           "descripcion": "Can choose, scrambled, fried well-done, sunny side-up, scrambled with tomatoes and onions",
+          "descripcion_es": "Puedes elegir, revueltos, fritos bien cocidos, estrellados, revueltos con tomates y cebollas",
           "precio": "Q45",
           "imagen": "assets/images/cena/cen001.webp"
         },
         {
           "id": "cen002",
           "nombre": "Pancakes with Fruits",
+          "nombre_es": "Panqueques con Frutas",
           "descripcion": "Pancakes with seasonal fruits and maple syrup",
+          "descripcion_es": "Panqueques con frutas de temporada y jarabe de arce",
           "precio": "Q50",
           "imagen": "assets/images/cena/cen002.webp"
         },
         {
           "id": "cen003",
           "nombre": "Omelette",
+          "nombre_es": "Omelette",
           "descripcion": "Omelette with cheese, ham, and vegetables, with a side of black beans, toast and fruit",
+          "descripcion_es": "Omelette con queso, jamón y verduras, acompañado de frijoles negros, tostadas y fruta",
           "precio": "Q45",
           "imagen": "assets/images/cena/cen003.webp"
         },
         {
           "id": "cen004",
           "nombre": "Cereal with milk and seasonal fruit",
+          "nombre_es": "Cereal con leche y fruta de temporada",
           "descripcion": "Cereal served with milk and seasonal fruit.",
+          "descripcion_es": "Cereal servido con leche y fruta de temporada.",
           "precio": "Q48",
           "imagen": "assets/images/cena/cen004.webp"
         },
         {
           "id": "cen005",
           "nombre": "Toasts with jelly and butter",
+          "nombre_es": "Tostadas con mermelada y mantequilla",
           "descripcion": "Toast with butter and jelly, served with a side of fresh fruit.",
+          "descripcion_es": "Tostadas con mantequilla y mermelada, acompañadas de fruta fresca.",
           "precio": "Q40",
           "imagen": "assets/images/cena/cen005.webp"
         },
         {
           "id": "cen006",
           "nombre": "Yogurt with Granola and Fruits",
+          "nombre_es": "Yogur con Granola y Frutas",
           "descripcion": "Natural yogurt, granola, seasonal fruits, honey",
+          "descripcion_es": "Yogur natural, granola, frutas de temporada, miel",
           "precio": "Q55",
           "imagen": "assets/images/cena/cen006.webp"
         }
@@ -211,273 +269,329 @@
     },
     "cold-drinks": {
       "titulo": "Cold Drinks",
+      "titulo_es": "Bebidas Fr\u00edas",
       "items": [
-        
-           
         {
           "id": "drink001",
           "nombre": "Gatorade",
+          "nombre_es": "Gatorade",
           "descripcion": "Grape/Orange/Fruit Punch",
+          "descripcion_es": "Uva/Naranja/Ponche de Frutas",
           "precio": "Q15",
           "imagen": "assets/images/bebidas/drink001.webp"
         },
         {
           "id": "drink002",
           "nombre": "Lipton Ice Tea",
-          "descripcion": "Raspberry or Lemon",
+          "nombre_es": "Té Helado Lipton",
+          "descripcion": "Raspberry, Lemon or Peach",
+          "descripcion_es": "Frambuesa, Limón o Durazno",
           "precio": "Q15",
           "imagen": "assets/images/bebidas/drink002.webp"
         },
         {
           "id": "drink003",
           "nombre": "Tropical Smoothie",
+          "nombre_es": "Smoothie Tropical",
           "descripcion": "Strawberry and Banana with milk",
+          "descripcion_es": "Fresa y Plátano con leche",
           "precio": "Q25",
           "imagen": "assets/images/bebidas/drink003.webp"
         },
-        
         {
-            "id": "drink019",
-            "nombre": "Coca Cola",   
-            "descripcion": "Classic soda",
-            "precio": "Q10",
-            "imagen": "assets/images/bebidas/drink019.webp"
-          },
+          "id": "drink019",
+          "nombre": "Coca Cola",
+          "nombre_es": "Coca Cola",
+          "descripcion": "Classic soda",
+          "descripcion_es": "Refresco clásico",
+          "precio": "Q10",
+          "imagen": "assets/images/bebidas/drink019.webp"
+        },
         {
           "id": "drink021",
           "nombre": "Coca Cola Light",
+          "nombre_es": "Coca Cola Light",
           "descripcion": "Light soda",
+          "descripcion_es": "Refresco light",
           "precio": "Q10",
           "imagen": "assets/images/bebidas/drink021.webp"
-
         },
-        
         {
           "id": "drink006",
           "nombre": "Lemonade",
+          "nombre_es": "Limonada",
           "descripcion": "With lemon and mint",
+          "descripcion_es": "Con limón y menta",
           "precio": "Q25",
           "imagen": "assets/images/bebidas/drink006.webp"
         },
         {
           "id": "drink014",
           "nombre": "Naranjada",
+          "nombre_es": "Naranjada",
           "descripcion": "Chilled orange juice with a hint of sparkling water, perfect for a refreshing boost on a hot day",
+          "descripcion_es": "Jugo de naranja frío con un toque de agua con gas, perfecto para un impulso refrescante en un día caluroso",
           "precio": "Q25",
           "imagen": "assets/images/bebidas/drink014.webp"
-        } 
-      
-      
+        }
       ]
     },
     "hot-drinks": {
       "titulo": "Hot Drinks",
+      "titulo_es": "Bebidas Calientes",
       "items": [
         {
           "id": "drink004",
           "nombre": "Coffee",
+          "nombre_es": "Café",
           "descripcion": "Premium quality cream",
+          "descripcion_es": "Crema de calidad premium",
           "precio": "Q12",
           "imagen": "assets/images/bebidas/drink004.webp"
         },
         {
           "id": "drink005",
           "nombre": "Coffee with Milk",
+          "nombre_es": "Café con Leche",
           "descripcion": "With steamed milk",
+          "descripcion_es": "Con leche vaporizada",
           "precio": "Q15",
           "imagen": "assets/images/bebidas/drink005.webp"
         },
         {
           "id": "drink011",
           "nombre": "Tea",
+          "nombre_es": "Té",
           "descripcion": "A selection of fine teas, served hot",
+          "descripcion_es": "Una selección de tés finos, servidos calientes",
           "precio": "Q12",
           "imagen": "assets/images/bebidas/drink011.webp"
         },
         {
           "id": "drink012",
-          "nombre": "Tea with Milk  ",
+          "nombre": "Tea with Milk",
+          "nombre_es": "Té con Leche",
           "descripcion": "Spiced tea with steamed milk, a comforting blend of flavors",
+          "descripcion_es": "Té especiado con leche vaporizada, una mezcla reconfortante de sabores",
           "precio": "Q15",
           "imagen": "assets/images/bebidas/drink012.webp"
         },
-          {
-            "id": "drink013",
-            "nombre": "Hot Chocolate",
-            "descripcion": "Rich and creamy hot chocolate, perfect for a cozy moment",
-            "precio": "Q20",
-            "imagen": "assets/images/bebidas/drink013.webp"
-          }
-
+        {
+          "id": "drink013",
+          "nombre": "Hot Chocolate",
+          "nombre_es": "Chocolate Caliente",
+          "descripcion": "Rich and creamy hot chocolate, perfect for a cozy moment",
+          "descripcion_es": "Chocolate caliente rico y cremoso, perfecto para un momento acogedor",
+          "precio": "Q20",
+          "imagen": "assets/images/bebidas/drink013.webp"
+        }
       ]
     },
     "alcohol": {
       "titulo": "Good Drinks for a Good Time",
+      "titulo_es": "Buenas Bebidas para un Buen Momento",
       "items": [
         {
           "id": "drink007",
           "nombre": "Mojito",
+          "nombre_es": "Mojito",
           "descripcion": "Rum, mint, lemon and soda",
+          "descripcion_es": "Ron, menta, limón y soda",
           "precio": "Q30",
           "imagen": "assets/images/bebidas/drink007.webp"
         },
         {
           "id": "drink008",
           "nombre": "Cuba Libre",
+          "nombre_es": "Cuba Libre",
           "descripcion": "Rum, cola, and lime, a classic cocktail that combines the sweetness of cola with the refreshing zest of lime, perfect for any occasion",
-          "precio": "Q25",  
+          "descripcion_es": "Ron, cola y lima, un cóctel clásico que combina la dulzura de la cola con el refrescante sabor de la lima, perfecto para cualquier ocasión",
+          "precio": "Q25",
           "imagen": "assets/images/bebidas/drink008.webp"
         },
         {
           "id": "drink009",
           "nombre": "Pina Colada",
+          "nombre_es": "Piña Colada",
           "descripcion": "Rum, coconut cream, and pineapple juice, a tropical delight that transports you to a beach paradise",
+          "descripcion_es": "Ron, crema de coco y jugo de piña, un deleite tropical que te transporta a un paraíso en la playa",
           "precio": "Q30",
           "imagen": "assets/images/bebidas/drink009.webp"
         },
         {
           "id": "drink010",
           "nombre": "Margarita",
+          "nombre_es": "Margarita",
           "descripcion": "Tequila, triple sec, lemon",
+          "descripcion_es": "Tequila, triple sec, limón",
           "precio": "Q30",
           "imagen": "assets/images/bebidas/drink010.webp"
         },
-      {
+        {
           "id": "drink015",
           "nombre": "Daiquiri",
+          "nombre_es": "Daiquiri",
           "descripcion": "A refreshing blend of rum, lime juice, and simple syrup, served in a chilled glass. Perfect for those who enjoy a tangy and sweet cocktail  .",
+          "descripcion_es": "Una mezcla refrescante de ron, jugo de lima y jarabe simple, servida en un vaso frío. Perfecto para quienes disfrutan de un cóctel ácido y dulce.",
           "precio": "Q30",
           "imagen": "assets/images/bebidas/drink015.webp"
-      },
-      {
+        },
+        {
           "id": "drink016",
           "nombre": "Glass Wine",
+          "nombre_es": "Copa de Vino",
           "descripcion": "A glass of wine, available in red, white, or rosé, perfect for pairing with your meal or enjoying on its own.",
+          "descripcion_es": "Una copa de vino, disponible en tinto, blanco o rosado, perfecta para acompañar tu comida o disfrutarla sola.",
           "precio": "Q35",
           "imagen": "assets/images/bebidas/drink016.webp"
-      },
-      {
+        },
+        {
           "id": "drink017",
           "nombre": "Gallo Beer",
+          "nombre_es": "Cerveza Gallo",
           "descripcion": "The National Beer of Guatemala, a refreshing lager with a crisp and balanced flavor, perfect for enjoying with friends or as a complement to your meal.",
+          "descripcion_es": "La cerveza nacional de Guatemala, una lager refrescante con un sabor equilibrado y crujiente, perfecta para disfrutar con amigos o como complemento de tu comida.",
           "precio": "Q25",
           "imagen": "assets/images/bebidas/drink017.webp"
-      },
-      { 
+        },
+        {
           "id": "drink018",
           "nombre": "Corona Beer",
+          "nombre_es": "Cerveza Corona",
           "descripcion": "A light and refreshing beer with a crisp taste, perfect for enjoying on a sunny day or as a complement to your meal.",
+          "descripcion_es": "Una cerveza ligera y refrescante con un sabor crujiente, perfecta para disfrutar en un día soleado o como complemento de tu comida.",
           "precio": "Q25",
           "imagen": "assets/images/bebidas/drink018.webp"
-      },
-      {
+        },
+        {
           "id": "drink020",
           "nombre": "Michelada",
+          "nombre_es": "Michelada",
           "descripcion": "A classic Mexican cocktail made with beer, lime juice, assorted sauces, spices, and peppers, served in a chilled, salt-rimmed glass.",
+          "descripcion_es": "Un cóctel clásico mexicano hecho con cerveza, jugo de lima, salsas variadas, especias y chiles, servido en un vaso frío con borde de sal.",
           "precio": "Q45",
           "imagen": "assets/images/bebidas/drink020.webp"
-      },
-      {
+        },
+        {
           "id": "drink022",
           "nombre": "Oasis",
+          "nombre_es": "Oasis",
           "descripcion": "Our signature cocktail made with white rum and blue curaçao, a refreshing tropical blend as vibrant as the place itself.",
+          "descripcion_es": "Nuestro cóctel insignia hecho con ron blanco y curaçao azul, una mezcla tropical refrescante tan vibrante como el lugar mismo.",
           "precio": "Q40",
           "imagen": "assets/images/bebidas/oasis.webp"
-      }
-      
-      
+        }
       ]
     },
     "snacks": {
       "titulo": "Snacks next to the River",
+      "titulo_es": "Snacks a la Orilla del R\u00edo",
       "items": [
         {
           "id": "snk001",
           "nombre": "17.-Veggie Nachos",
+          "nombre_es": "17.-Nachos Vegetarianos",
           "descripcion": "Totopos crujientes con queso fundido, frijoles refritos, jalapeños y guacamole. El snack que te hará olvidar que estás en medio de la selva.",
+          "descripcion_es": "Totopos crujientes con queso fundido, frijoles refritos, jalapeños y guacamole. El snack que te hará olvidar que estás en medio de la selva.",
           "precio": "Q45",
           "imagen": "assets/images/snacks/snk001.webp"
         },
         {
           "id": "snk002",
           "nombre": "18.-Beef Nachos",
+          "nombre_es": "18.-Nachos de Res",
           "descripcion": "Totopos crujientes con carne de res sazonada, queso fundido, jalapeños y guacamole. La mejor excusa para no moverte de tu mesa.",
+          "descripcion_es": "Totopos crujientes con carne de res sazonada, queso fundido, jalapeños y guacamole. La mejor excusa para no moverte de tu mesa.",
           "precio": "Q55",
           "imagen": "assets/images/snacks/snk002.webp"
         },
         {
           "id": "snk003",
           "nombre": "19.-Sandwich Ham & Cheese",
+          "nombre_es": "19.-Sándwich de Jamón y Queso",
           "descripcion": "Sándwich de jamón y queso con pan artesanal, lechuga fresca y tomate. El clásico que nunca falla, perfecto para compartir o devorar solo.",
+          "descripcion_es": "Sándwich de jamón y queso con pan artesanal, lechuga fresca y tomate. El clásico que nunca falla, perfecto para compartir o devorar solo.",
           "precio": "Q35",
           "imagen": "assets/images/snacks/snk003.webp"
         },
         {
           "id": "snk004",
           "nombre": "20.-Chicken Sandwich",
+          "nombre_es": "20.-Sándwich de Pollo",
           "descripcion": "Sándwich de pollo con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
+          "descripcion_es": "Sándwich de pollo con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
           "precio": "Q40",
           "imagen": "assets/images/snacks/snk004.webp"
         },
         {
           "id": "snk005",
           "nombre": "21.-Veggie Sandwich",
+          "nombre_es": "21.-Sándwich Vegetariano",
           "descripcion": "Sándwich vegetariano con pan artesanal, lechuga fresca, tomate y aguacate. Ligero, fresco y delicioso.",
+          "descripcion_es": "Sándwich vegetariano con pan artesanal, lechuga fresca, tomate y aguacate. Ligero, fresco y delicioso.",
           "precio": "Q35",
           "imagen": "assets/images/snacks/snk005.webp"
         },
         {
           "id": "snk006",
           "nombre": "22.-Tuna Sandwich",
+          "nombre_es": "22.-Sándwich de Atún",
           "descripcion": "Sándwich de atún con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
+          "descripcion_es": "Sándwich de atún con pan artesanal, lechuga fresca y tomate. Perfecto para una comida ligera pero sabrosa.",
           "precio": "Q40",
           "imagen": "assets/images/snacks/snk006.webp"
         },
         {
           "id": "snk007",
           "nombre": "The Oasis Pizza",
+          "nombre_es": "Pizza del Oasis",
           "descripcion": "Pizza with Cheese, Mushrooms and Salami, Delicious pizza with a perfect blend of cheese, mushrooms, and salami. A classic favorite for any time of the day.",
+          "descripcion_es": "Pizza con queso, champiñones y salami. Deliciosa pizza con una mezcla perfecta de queso, champiñones y salami. Un clásico favorito para cualquier momento del día.",
           "precio": "Q160",
           "imagen": "assets/images/snacks/snk007.webp"
-        }        
+        }
       ]
-    
     },
     "seafood": {
       "titulo": "The Oasis Catch - Fresh from the River",
+      "titulo_es": "La Captura del Oasis - Fresco del R\u00edo",
       "items": [
         {
           "id": "sea001",
-          "nombre": "Fish Fillet ",
+          "nombre": "Fish Fillet",
+          "nombre_es": "Filete de Pescado",
           "descripcion": "Breaded fish fillet, fried to golden perfection, served with rice and a side of fries. The catch of the day, straight from the river to your plate.",
+          "descripcion_es": "Filete de pescado empanizado, frito a la perfección dorada, servido con arroz y una guarnición de papas fritas. La captura del día, directamente del río a tu plato.",
           "precio": "Q75",
           "imagen": "assets/images/seafood/sea001.webp"
         },
         {
           "id": "sea002",
           "nombre": "Garlic Shrimps or Crispy Shrimps",
+          "nombre_es": "Camarones al Ajo o Camarones Crujientes",
           "descripcion": "Shrimp sautéed in butter, roasted garlic. Served with crispy bread to soak up every drop.",
+          "descripcion_es": "Camarones salteados en mantequilla, ajo asado. Servidos con pan crujiente para absorber cada gota.",
           "precio": "Q85",
           "imagen": "assets/images/seafood/sea002.webp"
         },
         {
           "id": "sea003",
           "nombre": "Grilled Fish Fillet ( MOJARRA)",
+          "nombre_es": "Filete de Pescado a la Parrilla (MOJARRA)",
           "descripcion": "Grilled fish fillet, seasoned with herbs and served with a side of vegetables. A healthy and delicious choice.",
+          "descripcion_es": "Filete de pescado a la parrilla, sazonado con hierbas y servido con una guarnición de verduras. Una opción saludable y deliciosa.",
           "precio": "Q100",
           "imagen": "assets/images/seafood/sea003.webp"
         },
-        
-      {
-
+        {
           "id": "sea004",
-            "nombre": "Ceviche",
-            "descripcion": "Fresh fish marinated in citrus juices, mixed with onions, tomatoes, and cilantro. A refreshing and tangy dish perfect for seafood lovers.",
-            "precio": "Q60",
-            "imagen": "assets/images/seafood/sea004.webp"
-
-      }
-      
+          "nombre": "Ceviche",
+          "nombre_es": "Ceviche",
+          "descripcion": "Fresh fish marinated in citrus juices, mixed with onions, tomatoes, and cilantro. A refreshing and tangy dish perfect for seafood lovers.",
+          "descripcion_es": "Pescado fresco marinado en jugos cítricos, mezclado con cebolla, tomate y cilantro. Un plato refrescante y ácido, perfecto para los amantes del marisco.",
+          "precio": "Q60",
+          "imagen": "assets/images/seafood/sea004.webp"
+        }
       ]
     }
   }

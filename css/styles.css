@@ -47,6 +47,39 @@ body {
 .header-container {
     max-width: 1200px;
     margin: 0 auto;
+    position: relative;
+}
+
+/* ==================== Botón de Idioma ==================== */
+.lang-btn {
+    display: flex;
+    align-items: center;
+    gap: 0.35rem;
+    padding: 0 0.65rem;
+    height: 40px;
+    min-width: 40px;
+    border: none;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.15);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 0.78rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.lang-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    color: white;
+}
+
+.lang-icon {
+    width: 18px;
+    height: 18px;
+    flex-shrink: 0;
 }
 
 .header-logo-section {
@@ -247,64 +280,6 @@ body {
     background-color: rgba(61, 143, 109, 0.15);
     border-bottom-color: var(--secondary-color);
     transition: all 0.25s ease;
-}
-
-/* ==================== Subcategorías ==================== */
-.subcategories-nav {
-    display: flex;
-    justify-content: center;
-    gap: 0.5rem;
-    flex-wrap: wrap;
-    margin-bottom: 2rem;
-    padding: 0.5rem;
-    background: white;
-    border-radius: 8px;
-    box-shadow: var(--shadow);
-}
-
-.subcategory-btn {
-    display: flex;
-    align-items: center;
-    gap: 0.5rem;
-    padding: 0.6rem 1rem;
-    border: 1px solid var(--border-color);
-    background: white;
-    color: var(--dark-text);
-    font-size: 0.85rem;
-    font-weight: 500;
-    cursor: pointer;
-    border-radius: 6px;
-    transition: var(--transition);
-}
-
-.subcategory-btn:hover {
-    border-color: var(--secondary-color);
-    background: rgba(61, 143, 109, 0.05);
-}
-
-.subcategory-btn.active {
-    background: var(--secondary-color);
-    color: white;
-    border-color: var(--secondary-color);
-}
-
-.subcategory-icon {
-    font-size: 1.1rem;
-}
-
-@media (max-width: 768px) {
-    .subcategories-nav {
-        gap: 0.4rem;
-    }
-    
-    .subcategory-btn {
-        padding: 0.5rem 0.75rem;
-        font-size: 0.75rem;
-    }
-    
-    .subcategory-icon {
-        font-size: 1rem;
-    }
 }
 
 /* ==================== Main Container ==================== */

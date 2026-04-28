@@ -1,19 +1,13 @@
 // ==================== Variables ====================
 let menuData = null;
 let currentCategory = 'breakfast';
+let currentLang = localStorage.getItem('oasis_lang') || 'en';
 
 const LAST_CATEGORY_KEY = 'oasis_last_category';
 const CACHE_KEY = 'oasis_menu_cache';
 const CACHE_VERSION_KEY = 'oasis_cache_version';
-const CACHE_VERSION = '1.2'; // Cambiar esto invalida todos los caches
+const CACHE_VERSION = 'v8'; // Cambiar esto invalida todos los caches
 const CACHE_DURATION = 24 * 60 * 60 * 1000;
-
-const CATEGORY_MAP = {
-    'desayuno': 'breakfast',
-    'almuerzo': 'lunch',
-    'cena': 'dinner',
-    'bebidas': 'drinks'
-};
 
 // ==================== LocalStorage ====================
 function saveMenuCache(data) {
@@ -21,7 +15,7 @@ function saveMenuCache(data) {
         localStorage.setItem(CACHE_KEY, JSON.stringify(data));
         localStorage.setItem(CACHE_KEY + '_time', Date.now().toString());
         localStorage.setItem(CACHE_VERSION_KEY, CACHE_VERSION);
-    } catch (e) {}
+    } catch (e) { console.error('Error saving menu cache:', e); }
 }
 
 function getMenuCache() {
@@ -29,27 +23,90 @@ function getMenuCache() {
         const version = localStorage.getItem(CACHE_VERSION_KEY);
         const cached = localStorage.getItem(CACHE_KEY);
         const time = localStorage.getItem(CACHE_KEY + '_time');
-        
+
         if (version !== CACHE_VERSION) {
             localStorage.removeItem(CACHE_KEY);
             localStorage.removeItem(CACHE_KEY + '_time');
             localStorage.removeItem(CACHE_VERSION_KEY);
             return null;
         }
-        
+
         if (cached && time && (Date.now() - parseInt(time)) < CACHE_DURATION) {
             return JSON.parse(cached);
         }
-    } catch (e) {}
+    } catch (e) { }
     return null;
 }
 
 function saveLastCategory(cat) {
-    try { localStorage.setItem(LAST_CATEGORY_KEY, cat); } catch (e) {}
+    try { localStorage.setItem(LAST_CATEGORY_KEY, cat); } catch (e) { console.error('Error saving last category:', e); }
 }
 
 function getLastCategory() {
-    try { return localStorage.getItem(LAST_CATEGORY_KEY); } catch (e) { return null; }
+    try { return localStorage.getItem(LAST_CATEGORY_KEY); } catch (e) { console.error('Error reading last category:', e); return null; }
+}
+
+// ==================== Idioma ====================
+const UI_TRANSLATIONS = {
+    en: {
+        langBtn: 'ES',
+        searchPlaceholder: 'Search dish...',
+        loading: 'Loading menu...',
+        noResults: (q) => `No results found for "${q}"`,
+        clearSearch: 'Clear search',
+        results: (q) => `Results: "${q}"`,
+        offlineBanner: '📴 Offline - Showing cached data',
+        categories: {
+            breakfast: 'Breakfast', lunch: 'Lunch', dinner: 'Dinner',
+            snacks: 'Snacks', seafood: 'Seafood',
+            'cold-drinks': 'Cold Drinks', 'hot-drinks': 'Hot Drinks', alcohol: 'Alcohol'
+        }
+    },
+    es: {
+        langBtn: 'EN',
+        searchPlaceholder: 'Buscar platillo...',
+        loading: 'Cargando menú...',
+        noResults: (q) => `No se encontraron resultados para "${q}"`,
+        clearSearch: 'Limpiar búsqueda',
+        results: (q) => `Resultados: "${q}"`,
+        offlineBanner: '📴 Sin conexión - Mostrando datos guardados',
+        categories: {
+            breakfast: 'Desayuno', lunch: 'Almuerzo', dinner: 'Cena',
+            snacks: 'Snacks', seafood: 'Mariscos',
+            'cold-drinks': 'Bebidas Frías', 'hot-drinks': 'Bebidas Calientes', alcohol: 'Alcohol'
+        }
+    }
+};
+
+function getLangText(item, field) {
+    if (currentLang === 'es') return item[field + '_es'] || item[field] || '';
+    return item[field] || '';
+}
+
+function getCategoryTitle(cat) {
+    if (currentLang === 'es') return cat.titulo_es || cat.titulo || '';
+    return cat.titulo || '';
+}
+
+function updateStaticUI() {
+    const t = UI_TRANSLATIONS[currentLang];
+
+    const langBtn = document.getElementById('lang-btn');
+    if (langBtn) {
+        const label = langBtn.querySelector('.lang-label');
+        if (label) label.textContent = t.langBtn;
+    }
+
+    const searchInput = document.getElementById('search-input');
+    if (searchInput) searchInput.placeholder = t.searchPlaceholder;
+
+    document.querySelectorAll('.category-btn').forEach(btn => {
+        const cat = btn.dataset.category;
+        if (cat && t.categories[cat]) {
+            btn.textContent = t.categories[cat];
+            btn.title = t.categories[cat];
+        }
+    });
 }
 
 // ==================== Utilidades ====================
@@ -70,29 +127,28 @@ function formatPrice(price) {
 // ==================== Carga de Datos ====================
 async function loadMenuData() {
     const container = document.getElementById('menu-items-container');
-    container.innerHTML = '<div class="loading-state"><div class="loader"></div><p>Loading menu...</p></div>';
-    
+    container.innerHTML = `<div class="loading-state"><div class="loader"></div><p>${UI_TRANSLATIONS[currentLang].loading}</p></div>`;
+
     try {
         const response = await fetch('data/menu.json?t=' + Date.now());
         if (!response.ok) throw new Error('Error al cargar menu.json');
-        
+
         const freshData = await response.json();
-        
+
         if (!freshData.menu || typeof freshData.menu !== 'object') {
             throw new Error('Estructura JSON inválida');
         }
-        
+
         menuData = freshData;
         saveMenuCache(menuData);
-        
+
         const lastCat = getLastCategory();
         if (lastCat) {
-            const normalizedCat = CATEGORY_MAP[lastCat] || lastCat;
-            if (menuData.menu[normalizedCat]) {
-                currentCategory = normalizedCat;
+            if (menuData.menu[lastCat]) {
+                currentCategory = lastCat;
             }
         }
-        
+
         renderMenu();
     } catch (error) {
         const cached = getMenuCache();
@@ -109,7 +165,7 @@ async function loadMenuData() {
 function showOfflineBanner() {
     const banner = document.createElement('div');
     banner.className = 'offline-banner';
-    banner.textContent = '📴 Offline - Showing cached data';
+    banner.textContent = UI_TRANSLATIONS[currentLang].offlineBanner;
     document.body.insertBefore(banner, document.body.firstChild);
     setTimeout(() => banner.remove(), 5000);
 }
@@ -117,8 +173,15 @@ function showOfflineBanner() {
 // ==================== Renderizado ====================
 function renderMenu() {
     if (!menuData) return;
-    
+
     const container = document.getElementById('menu-items-container');
+
+    // Maintain height to prevent sticky nav overlap and layout shift
+    const currentHeight = container.offsetHeight;
+    if (currentHeight > 0) {
+        container.style.minHeight = currentHeight + 'px';
+    }
+
     container.innerHTML = '';
 
     // Reiniciar animación fadeIn
@@ -128,21 +191,27 @@ function renderMenu() {
 
     const cat = menuData.menu[currentCategory];
     if (!cat || !cat.items) return;
-    
-    document.getElementById('category-title').textContent = cat.titulo || currentCategory;
-    
+
+    const titleEl = document.getElementById('category-title');
+    if (titleEl) titleEl.textContent = getCategoryTitle(cat) || currentCategory;
+
     cat.items.forEach((item, i) => {
         container.appendChild(createItemElement(item, i));
     });
-    
+
     updateButtons();
+
+    // Reset minHeight after a short delay to allow items to render
+    setTimeout(() => {
+        container.style.minHeight = '';
+    }, 100);
 }
 
 function createItemElement(item, index) {
     if (item.type === 'section-header') {
         const div = document.createElement('div');
         div.className = 'menu-section-header';
-        div.textContent = item.titulo || '';
+        div.textContent = (currentLang === 'es' ? (item.titulo_es || item.titulo) : item.titulo) || '';
         return div;
     }
 
@@ -150,24 +219,27 @@ function createItemElement(item, index) {
     div.className = 'menu-item animate-in';
     div.style.animationDelay = (index * 0.06) + 's';
 
+    const nombre = getLangText(item, 'nombre');
+    const descripcion = getLangText(item, 'descripcion');
+
     const imageHTML = item.imagen
-        ? `<img src="${escapeHTML(item.imagen)}" alt="${escapeHTML(item.nombre)}" class="menu-item-image" loading="lazy" onerror="this.style.display='none'">`
+        ? `<img src="${escapeHTML(item.imagen)}" alt="${escapeHTML(nombre)}" class="menu-item-image" loading="lazy" onerror="this.style.display='none'">`
         : '';
 
     div.innerHTML = `
         ${imageHTML}
         <div class="menu-item-content">
             <div class="menu-item-header">
-                <h3 class="menu-item-name">${escapeHTML(item.nombre)}</h3>
+                <h3 class="menu-item-name">${escapeHTML(nombre)}</h3>
                 <span class="menu-item-price">${formatPrice(item.precio)}</span>
             </div>
-            <p class="menu-item-description">${escapeHTML(item.descripcion)}</p>
+            <p class="menu-item-description">${escapeHTML(descripcion)}</p>
         </div>
     `;
-    
+
     // Event listener para toda la card
     div.addEventListener('click', () => showItemModal(item));
-    
+
     return div;
 }
 
@@ -180,9 +252,9 @@ function showItemModal(item) {
 
     if (item.imagen) {
         modalImage.src = item.imagen;
-        modalImage.alt = item.nombre;
+        modalImage.alt = getLangText(item, 'nombre');
         modalImage.style.display = 'block';
-        
+
         const img = new Image();
         img.onerror = () => {
             modalImage.style.display = 'none';
@@ -199,8 +271,8 @@ function showItemModal(item) {
 
     if (!nameEl || !descEl || !priceEl || !catEl) return;
 
-    nameEl.textContent = item.nombre;
-    descEl.textContent = item.descripcion || '';
+    nameEl.textContent = getLangText(item, 'nombre');
+    descEl.textContent = getLangText(item, 'descripcion') || '';
     priceEl.textContent = formatPrice(item.precio);
     catEl.textContent = item._cat || '';
 
@@ -209,7 +281,8 @@ function showItemModal(item) {
 }
 
 function closeModal() {
-    document.getElementById('item-modal').classList.remove('active');
+    const modalEl = document.getElementById('item-modal');
+    if (modalEl) modalEl.classList.remove('active');
     document.body.classList.remove('modal-open');
 }
 
@@ -232,9 +305,8 @@ function switchCategory(cat) {
         clearBtn.classList.remove('visible');
     }
 
-    const normalizedCat = CATEGORY_MAP[cat] || cat;
-    currentCategory = normalizedCat;
-    saveLastCategory(normalizedCat);
+    currentCategory = cat;
+    saveLastCategory(cat);
     renderMenu();
 }
 
@@ -243,13 +315,13 @@ function initSearch() {
     const input = document.getElementById('search-input');
     const clearBtn = document.getElementById('search-clear');
     let timer;
-    
+
     input.addEventListener('input', () => {
         clearBtn.classList.toggle('visible', input.value.length > 0);
         clearTimeout(timer);
         timer = setTimeout(() => doSearch(input.value), 300);
     });
-    
+
     clearBtn.addEventListener('click', () => {
         input.value = '';
         clearBtn.classList.remove('visible');
@@ -262,47 +334,51 @@ function doSearch(query) {
         renderMenu();
         return;
     }
-    
+
     const results = [];
     const q = query.toLowerCase();
-    
+
     // Búsqueda en todas las categorías
     Object.entries(menuData.menu).forEach(([catKey, cat]) => {
         if (cat.items && Array.isArray(cat.items)) {
+            const catTitle = getCategoryTitle(cat);
             cat.items.forEach(item => {
                 if (item.type === 'section-header') return;
-                if (item.nombre.toLowerCase().includes(q) || 
-                    (item.descripcion || '').toLowerCase().includes(q)) {
-                    results.push({ ...item, _cat: cat.titulo });
+                const nombre = getLangText(item, 'nombre').toLowerCase();
+                const desc = getLangText(item, 'descripcion').toLowerCase();
+                if (nombre.includes(q) || desc.includes(q)) {
+                    results.push({ ...item, _cat: catTitle });
                 }
             });
         }
     });
-    
+
     const container = document.getElementById('menu-items-container');
     container.innerHTML = '';
-    document.getElementById('category-title').textContent = `Results: "${query}"`;
-    
+    const t = UI_TRANSLATIONS[currentLang];
+    document.getElementById('category-title').textContent = t.results(query);
+
     if (results.length === 0) {
         // Crear elemento con botón
         const emptyDiv = document.createElement('div');
         emptyDiv.className = 'empty-state';
-        emptyDiv.innerHTML = `<p>No results found for "${escapeHTML(query)}"</p>`;
-        
+        emptyDiv.innerHTML = `<p>${escapeHTML(t.noResults(query))}</p>`;
+
         const clearBtn = document.createElement('button');
         clearBtn.className = 'btn-clear-search';
-        clearBtn.textContent = 'Clear search';
+        clearBtn.textContent = t.clearSearch;
         clearBtn.addEventListener('click', () => {
             document.getElementById('search-input').value = '';
-            document.getElementById('search-clear').classList.remove('visible');
+            const clearBtnEl = document.getElementById('search-clear');
+            if (clearBtnEl) clearBtnEl.classList.remove('visible');
             renderMenu();
         });
-        
+
         emptyDiv.appendChild(clearBtn);
         container.appendChild(emptyDiv);
         return;
     }
-    
+
     results.forEach((item, i) => {
         const div = createItemElement(item, i);
         const tag = document.createElement('div');
@@ -319,7 +395,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const searchContainer = document.getElementById('search-container');
     const searchInput = document.getElementById('search-input');
     const searchClear = document.getElementById('search-clear');
-    
+
     if (searchToggle && searchContainer) {
         searchToggle.addEventListener('click', () => {
             searchToggle.classList.toggle('active');
@@ -328,7 +404,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchInput.focus();
             }
         });
-        
+
         if (searchClear) {
             searchClear.addEventListener('click', () => {
                 searchInput.value = '';
@@ -336,7 +412,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 searchInput.dispatchEvent(new Event('input'));
             });
         }
-        
+
         searchInput.addEventListener('blur', () => {
             if (!searchInput.value) {
                 setTimeout(() => {
@@ -346,9 +422,27 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
     }
-    
+
+    const langBtn = document.getElementById('lang-btn');
+    if (langBtn) {
+        langBtn.addEventListener('click', () => {
+            currentLang = currentLang === 'es' ? 'en' : 'es';
+            localStorage.setItem('oasis_lang', currentLang);
+
+            // Limpiar búsqueda activa
+            const searchInput = document.getElementById('search-input');
+            const searchClearBtn = document.getElementById('search-clear');
+            if (searchInput) searchInput.value = '';
+            if (searchClearBtn) searchClearBtn.classList.remove('visible');
+
+            updateStaticUI();
+            renderMenu();
+        });
+    }
+
+    updateStaticUI();
     loadMenuData();
-    
+
     const categoryBtns = document.querySelectorAll('.category-btn');
     if (categoryBtns) {
         categoryBtns.forEach(btn => {
@@ -358,12 +452,12 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     }
-    
+
     const modalClose = document.getElementById('modal-close');
     if (modalClose) {
         modalClose.addEventListener('click', closeModal);
     }
-    
+
     const modal = document.getElementById('item-modal');
     if (modal) {
         modal.addEventListener('click', (e) => {
@@ -374,7 +468,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.addEventListener('keydown', (e) => {
         if (e.key === 'Escape') closeModal();
     });
-    
+
     initSearch();
     initSWUpdate();
 });
